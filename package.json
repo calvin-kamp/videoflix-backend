@@ -1,0 +1,12 @@
+{
+  "name": "videoflix-emails",
+  "private": true,
+  "description": "Compiles the MJML email templates of app_auth to HTML.",
+  "scripts": {
+    "build:emails": "mjml app_auth/templates/emails/mjml/*.mjml --output app_auth/templates/emails/html/ --config.validationLevel=strict",
+    "watch:emails": "mjml --watch app_auth/templates/emails/mjml/*.mjml --output app_auth/templates/emails/html/"
+  },
+  "devDependencies": {
+    "mjml": "4.15.3"
+  }
+}

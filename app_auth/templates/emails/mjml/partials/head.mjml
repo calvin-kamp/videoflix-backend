@@ -1,0 +1,36 @@
+<!--
+  Shared <mj-head> of all emails, pulled in with <mj-include>.
+  Wrapped in <mjml> so MJML merges it into the head of the including file.
+  Partials are not compiled on their own.
+-->
+<mjml>
+  <mj-head>
+    <mj-font name="DM Sans" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&amp;display=swap" />
+
+    <mj-attributes>
+      <mj-all font-family="'DM Sans', Helvetica, Arial, sans-serif" />
+      <mj-body background-color="#ffffff" width="600px" />
+      <mj-section padding="0" />
+      <mj-column padding="0" />
+      <mj-text color="#333333" font-size="16px" line-height="24px" padding="0 24px 16px" />
+      <mj-button
+        background-color="#2e3edf"
+        color="#ffffff"
+        font-size="18px"
+        font-weight="700"
+        border-radius="40px"
+        inner-padding="14px 32px"
+        padding="8px 24px 24px"
+        align="left"
+      />
+      <mj-image padding="0 24px" />
+    </mj-attributes>
+
+    <mj-style inline="inline">
+      .fallback-link a {
+        color: #2e3edf;
+        word-break: break-all;
+      }
+    </mj-style>
+  </mj-head>
+</mjml>

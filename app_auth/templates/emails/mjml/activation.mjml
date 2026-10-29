@@ -1,0 +1,53 @@
+<!--
+  Activation email, sent after POST /api/register/.
+  Context: email, activation_url
+  Compile with `npm run build:emails`, never edit html/activation.html by hand.
+-->
+<mjml lang="en">
+  <mj-head>
+    <mj-title>Confirm your email</mj-title>
+    <mj-preview>Activate your Videoflix account with one click.</mj-preview>
+    <mj-include path="./partials/head.mjml" />
+  </mj-head>
+
+  <mj-body>
+    <mj-section padding="32px 0 24px">
+      <mj-column>
+        <mj-image
+          src="cid:videoflix-logo"
+          alt="Videoflix"
+          width="251px"
+          height="40px"
+          align="center"
+        />
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-text>
+          Dear {{ email }},<br />
+          Thank you for registering with Videoflix. To complete your registration
+          and verify your email address, please click the link below:
+        </mj-text>
+
+        <mj-button href="{{ activation_url }}">Activate account</mj-button>
+
+        <mj-text>
+          If you did not create an account with us, please disregard this email.
+        </mj-text>
+
+        <mj-text>Best regards,</mj-text>
+
+        <mj-text padding="0 24px 24px">Your Videoflix Team.</mj-text>
+
+        <mj-divider border-width="1px" border-color="#e5e5e5" padding="0 24px 16px" />
+
+        <mj-text css-class="fallback-link" font-size="13px" line-height="20px" color="#757575">
+          If the button does not work, copy this link into your browser:<br />
+          <a href="{{ activation_url }}">{{ activation_url }}</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
